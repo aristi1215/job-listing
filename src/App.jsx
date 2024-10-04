@@ -50,7 +50,7 @@ function App() {
           </div>
         </div>
       </header>
-      <main className={`px-6 pb-[2rem] flex flex-col gap-10 ${selectedFilters.length === 0 ? 'pt-[2rem]' : 'pt-[8rem]'}`}>
+      <main className={`px-6 pb-[2rem] flex flex-col gap-10 ${selectedFilters.length === 0 ? 'pt-[2rem]' : 'pt-[8rem]'} bg-cyan-bg`}>
         {
           filterBy().map(job => (
             <JobListing key={job.id} job={job} handleAddFilters={handleAddFilters} />

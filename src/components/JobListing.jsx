@@ -1,7 +1,7 @@
 export const JobListing = ({job, handleAddFilters}) => {
     const positions = [job.role, job.level, job.languages].flat()
   return (
-    <section className="relative border-l-8 border-l-dark-cyan rounded-l-lg rounded-r-sm p-[1rem] shadow-lg">
+    <section className="relative border-l-8 border-l-dark-cyan rounded-l-lg rounded-r-sm p-[1rem] shadow-lg bg-white">
 
         <div className='lg:flex lg:items-center lg:justify-between'>
         <header className="absolute top-[-1rem] left-[1rem] lg:hidden">
