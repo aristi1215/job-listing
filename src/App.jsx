@@ -6,7 +6,7 @@ import { useState } from 'react'
 
 function App() {
 
-  const [selectedFilters, setSelectedFilters] = useState(['CSS','Frontend'])
+  const [selectedFilters, setSelectedFilters] = useState([])
 
   const handleAddFilters = (filter) => {
     if(!selectedFilters.includes(filter)){
@@ -24,6 +24,9 @@ function App() {
         return { ...data, filters };
       })
       .filter(item => {
+        if(selectedFilters.length === 0){
+          return true
+        }
         return selectedFilters.every(filter => item.filters.includes(filter));
       });
   
